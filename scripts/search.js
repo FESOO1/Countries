@@ -52,7 +52,7 @@ function searchingForACountry() {
             
         })
         .catch(error =>{
-            console.log(`Error occured: ${error}`);
+            console.log(error);
         });
     } else {
         outputContainer.innerHTML = '';
