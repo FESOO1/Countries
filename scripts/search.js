@@ -35,7 +35,7 @@ function searchingForACountry() {
         .then(country => {
             
             outputContainer.innerHTML = `
-                <div class="main-content-output">
+                <a href="./pages/country-data.html" class="main-content-output">
                     <div class="main-content-output-image">
                         <img src="${country[0].flags.svg}" class="main-content-output-image-itself">
                     </div>
@@ -47,7 +47,7 @@ function searchingForACountry() {
                             <h4 class="main-content-output-information-country-info-text">Capital: <span class="main-content-output-information-country-info-text-inner">${country[0].capital}</span></h4>
                         </div>
                     </div>
-                </div>
+                </a>
             `;
             
         })
