@@ -3,6 +3,7 @@
 main {
     padding-top: 110px;
     padding-inline: 80px;
+    padding-bottom: 80px;
     display: flex;
     flex-direction: column;
     row-gap: 40px;
@@ -161,7 +162,7 @@ main {
     padding: 5px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
+    gap: 70px 50px;
 }
 
 /* MAIN CONTENT OUTPUT */
@@ -183,6 +184,7 @@ main {
 
 .main-content-output-image-itself {
     width: 100%;
+    object-fit: cover;
 }
 
 /* MAIN CONTENT OUTPUT INFORMATION */

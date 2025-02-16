@@ -59,5 +59,43 @@ function searchingForACountry() {
     };
 };
 
+// DISPLAYING COUNTRIES
+
+function displayingCountries() {
+    fetch('../data.json')
+        .then(response => {
+            if (!response.ok) {
+                console.log(response.status);
+            };
+
+            return response.json();
+        })
+        .then(country => {
+
+            console.log(country[0].name.common);
+
+            for (let i = 0; i < 10; i++) {
+                outputContainer.innerHTML += `
+                    <a href="./pages/country-data.html" class="main-content-output">
+                        <div class="main-content-output-image">
+                            <img src="${country[i].flags.svg}" class="main-content-output-image-itself">
+                        </div>
+                        <div class="main-content-output-information">
+                            <h3 class="main-content-output-information-country-name">${country[i].name.common === undefined ? country[i].name : country[i].name.common}</h3>
+                            <div class="main-content-output-information-country-info">
+                                <h4 class="main-content-output-information-country-info-text">Population: <span class="main-content-output-information-country-info-text-inner">${country[i].population}</span></h4>
+                                <h4 class="main-content-output-information-country-info-text">Region: <span class="main-content-output-information-country-info-text-inner">${country[i].region}</span></h4>
+                                <h4 class="main-content-output-information-country-info-text">Capital: <span class="main-content-output-information-country-info-text-inner">${country[i].capital}</span></h4>
+                            </div>
+                        </div>
+                    </a>
+                `;
+            };
+
+        });
+};
+
+displayingCountries();
+
 // INITIALIZING BUTTONS
 searchInput.addEventListener('input', searchingForACountry);
