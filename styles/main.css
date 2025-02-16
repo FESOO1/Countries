@@ -8,6 +8,20 @@ main {
     row-gap: 40px;
 }
 
+/* MAIN NOT FOUND MESSAGE */
+
+.main-not-found-message {
+    color: rgb(200,200,200);
+    font-style: italic;
+    text-align: center;
+    font-weight: 300;
+    display: none;
+}
+
+.main-not-found-message-active {
+    display: unset;
+}
+
 /* MAIN SEARCH */
 
 .main-search {
