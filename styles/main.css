@@ -124,7 +124,6 @@ main {
     row-gap: 1px;
     padding-block: 5px;
     transform: translateY(-40px);
-    z-index: -1;
     opacity: 0;
     pointer-events: none;
     transition: transform 300ms, opacity 300ms;

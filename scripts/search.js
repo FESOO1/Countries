@@ -56,6 +56,7 @@ function searchingForACountry() {
         });
     } else {
         outputContainer.innerHTML = '';
+        displayingCountries();
     };
 };
 
