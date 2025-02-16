@@ -10,6 +10,7 @@
     border-bottom: 1px solid rgba(255,255,255,0.05);
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding-inline: 40px;
 }
 
@@ -21,3 +22,43 @@
 }
 
 /* NAVBAR THEME BUTTON */
+
+.navbar-button {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.navbar-button-moon-svg {
+    width: 20px;
+    height: 20px;
+    display: none;
+}
+
+.navbar-button-sun-svg {
+    color: white;
+    width: 20px;
+    height: 20px;
+}
+
+.navbar-button-text {
+    color: white;
+    font-weight: 400;
+}
+
+/* THEME */
+
+.theme-button-js .navbar-button-moon-svg {
+    display: unset;
+}
+
+.theme-button-js .navbar-button-sun-svg {
+    display: none;
+}
+
+.theme-button-js .navbar-button-text {
+    color: black;
+}
