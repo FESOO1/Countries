@@ -6,6 +6,7 @@
     <title>Countries API</title>
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
     <!-- NAVBAR -->
@@ -22,7 +23,39 @@
             <h3 class="navbar-button-text">Light Mode</h3>
         </button>
     </nav>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <div class="main-search">
+            <div class="main-search-itself">
+                <label for="searchInput">
+                    <svg class="main-search-itself-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+                        <path d="M17.5 17.5L22 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C15.9706 20 20 15.9706 20 11Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                    </svg>
+                    <input type="search" placeholder="Search for a country" id="searchInput" class="main-search-itself-input">
+                </label>
+            </div>
+            <div class="main-search-filter">
+                <div class="main-search-filter-itself" id="searchFilterButton">
+                    <h5 class="main-search-filter-itself-text">Filter by Region</h5>
+                    <svg class="main-search-filter-itself-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+                        <path d="M17.9998 15C17.9998 15 13.5809 9.00001 11.9998 9C10.4187 8.99999 5.99985 15 5.99985 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="main-search-filter-drop-down">
+                    <option value="africa" class="main-search-filter-drop-down-option">Africa</option>
+                    <option value="america" class="main-search-filter-drop-down-option">America</option>
+                    <option value="asia" class="main-search-filter-drop-down-option">Asia</option>
+                    <option value="europe" class="main-search-filter-drop-down-option">Europe</option>
+                    <option value="oceania" class="main-search-filter-drop-down-option">Oceania</option>
+                </div>
+            </div>
+        </div>
+        <div class="main-content"></div>
+    </main>
     
     <script src="./scripts/theme.js"></script>
+    <script src="./scripts/search.js"></script>
 </body>
 </html>
